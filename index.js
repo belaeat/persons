@@ -20,4 +20,14 @@ async function fetchUserData() {
   }
 }
 
+async function avatarFunction() {
+  try {
+    const response = await fetch("https://robohash.org/");
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log("Error", error);
+  }
+}
+
 fetchUserData();
